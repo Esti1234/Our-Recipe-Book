@@ -1,0 +1,172 @@
+:root {
+  --paper: #fff6ec;
+  --paper-edge: #ffe3cc;
+  --ink: #4a3226;
+  --muted: #8a6f5e;
+  --accent: #e0643f;
+  --accent-soft: #ffd9c2;
+  --mint: #cfe8e0;
+  --card: #ffffff;
+  --rule: #f2d8c0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #2a1f19;
+    --paper-edge: #3a2b22;
+    --ink: #f6e9db;
+    --muted: #c4ab96;
+    --accent: #ff8a65;
+    --accent-soft: #5a3a2c;
+    --mint: #355248;
+    --card: #36291f;
+    --rule: #54402f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  background-image: radial-gradient(var(--rule) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+  color: var(--ink);
+  font-family: "Rubik", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* ---------- כותרת הספר ---------- */
+
+.cover {
+  text-align: center;
+  padding: 40px 16px 56px;
+  background: var(--paper-edge);
+  border-bottom: 4px dashed var(--accent);
+  border-radius: 0 0 48px 48px;
+}
+
+.logo {
+  width: 104px;
+  height: 104px;
+  display: block;
+  margin: 0 auto 8px;
+  animation: bob 4s ease-in-out infinite;
+}
+
+@keyframes bob {
+  50% { transform: translateY(-6px) rotate(-3deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo { animation: none; }
+}
+
+.cover-kicker {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+h1 {
+  margin: 4px 0 8px;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 7vw, 3.6rem);
+  line-height: 1.15;
+}
+
+.cover-sub { margin: 0; color: var(--muted); }
+
+.host {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 6px 18px 6px 8px;
+  background: var(--card);
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: block;
+}
+
+/* ---------- כרטיסי המתכונים ---------- */
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 40px 16px 16px;
+}
+
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.recipe {
+  background: var(--card);
+  border: 2px solid var(--rule);
+  border-radius: 24px;
+  padding: 24px;
+  overflow: hidden;
+  box-shadow: 0 6px 0 var(--rule);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe:hover {
+  transform: translateY(-4px) rotate(-0.4deg);
+  box-shadow: 0 10px 0 var(--rule);
+}
+
+.recipe-img {
+  display: block;
+  width: calc(100% + 48px);
+  height: 190px;
+  margin: -24px -24px 18px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--rule);
+}
+
+.recipe h2 {
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.meta {
+  display: inline-block;
+  margin: 4px 0 8px;
+  padding: 2px 12px;
+  background: var(--accent-soft);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 0.85rem;
+}
+
+.recipe h3 {
+  margin: 18px 0 6px;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+.recipe ul, .recipe ol { margin: 0; padding-inline-start: 22px; }
+.recipe li { margin-bottom: 4px; }
+.recipe li::marker { color: var(--accent); }
+
+footer {
+  text-align: center;
+  padding: 32px 16px 56px;
+  color: var(--muted);
+}
+
+footer a { color: var(--accent); font-weight: 500; }

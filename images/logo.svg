@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="לוגו ספר המתכונים">
+  <circle cx="60" cy="60" r="57" fill="#ffd9c2" stroke="#b5482a" stroke-width="3"/>
+  <circle cx="60" cy="82" r="24" fill="#ffe2c6" stroke="#d9a47a" stroke-width="2"/>
+  <circle cx="51" cy="82" r="3" fill="#3b2a20"/>
+  <circle cx="69" cy="82" r="3" fill="#3b2a20"/>
+  <path d="M52 90 Q60 97 68 90" fill="none" stroke="#3b2a20" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="44" cy="90" r="4" fill="#ff9aa2" opacity=".6"/>
+  <circle cx="76" cy="90" r="4" fill="#ff9aa2" opacity=".6"/>
+  <g fill="#fff" stroke="#d9b99b" stroke-width="2">
+    <circle cx="43" cy="50" r="13"/>
+    <circle cx="77" cy="50" r="13"/>
+    <circle cx="60" cy="42" r="16"/>
+    <rect x="41" y="52" width="38" height="14" rx="4"/>
+  </g>
+  <rect x="41" y="60" width="38" height="5" fill="#b5482a" opacity=".85"/>
+  <path d="M95 22 l2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5z" fill="#ffc94d"/>
+</svg>

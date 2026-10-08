@@ -1,0 +1,34 @@
+name: PR checks
+
+# רץ על כל Pull Request שמיועד ל-main.
+# כל step הוא בדיקה נפרדת, כך שבלשונית Checks רואים בדיוק מה עבר ומה נכשל.
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Validate recipe PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history for diff)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check PR title, description, branch name and checklist
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          PR_BRANCH: ${{ github.head_ref }}
+        run: node scripts/check-pr-meta.js
+
+      - name: Check the PR only adds one recipe card
+        run: node scripts/check-pr-diff.js origin/${{ github.base_ref }}
+
+      - name: Validate index.html (no conflict markers, balanced tags, well-formed cards)
+        run: node scripts/validate-recipes.js
