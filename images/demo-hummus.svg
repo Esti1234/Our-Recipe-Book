@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="קערת חומוס">
+  <rect width="400" height="240" fill="#e8f1e4"/>
+  <ellipse cx="200" cy="200" rx="150" ry="14" fill="#c9d9c0" opacity=".7"/>
+  <ellipse cx="200" cy="130" rx="130" ry="62" fill="#f4e3c1" stroke="#c9a46a" stroke-width="4"/>
+  <ellipse cx="200" cy="128" rx="100" ry="40" fill="#f9edcf"/>
+  <path d="M120 128 Q200 90 280 128" fill="none" stroke="#e0b44c" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+  <g fill="#e6c27a" stroke="#c9a46a" stroke-width="2"><circle cx="170" cy="120" r="9"/><circle cx="200" cy="112" r="9"/><circle cx="230" cy="122" r="9"/></g>
+  <g fill="#6a9a4b"><ellipse cx="160" cy="140" rx="8" ry="4" transform="rotate(-25 160 140)"/><ellipse cx="240" cy="142" rx="8" ry="4" transform="rotate(25 240 142)"/></g>
+  <path d="M340 40 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z" fill="#ffc94d"/>
+</svg>
