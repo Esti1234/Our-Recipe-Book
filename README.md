@@ -2,6 +2,7 @@
 
 פרויקט אימון ל-Git ול-HTML: כל תלמידה כותבת כרטיס מתכון משלה, על שמה, דרך branch ו-Pull Request.
 
+- **הספר החי:** https://esti1234.github.io/Our-Recipe-Book/
 - **רוצה להוסיף מתכון?** התחילי ב-[CONTRIBUTING.md](CONTRIBUTING.md).
 - **הכרטיסים עצמם** נמצאים ב-[index.html](index.html). הכרטיס של חוי הוא הדוגמה.
 - **לראות את האתר מקומית:**
