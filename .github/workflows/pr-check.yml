@@ -24,7 +24,6 @@ jobs:
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
           PR_BODY: ${{ github.event.pull_request.body }}
-          PR_BRANCH: ${{ github.head_ref }}
         run: node scripts/check-pr-meta.js
 
       - name: Check the PR only adds one recipe card
