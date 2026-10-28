@@ -17,14 +17,13 @@
 
 | מתי | מה רץ | קובץ |
 | --- | --- | --- |
-| נפתח או עודכן Pull Request | בדיקת כותרת, תיאור, שם branch, checklist, תוכן ה-diff ותקינות ה-HTML | [pr-check.yml](.github/workflows/pr-check.yml) |
-| נעשה merge ל-`main` | בדיקה חוזרת ופרסום האתר ב-GitHub Pages | [deploy.yml](.github/workflows/deploy.yml) |
+| נעשה merge ל-`main` | בדיקת תקינות ה-HTML ופרסום האתר ב-GitHub Pages | [deploy.yml](.github/workflows/deploy.yml) |
 
 ## מבנה הפרויקט
 
 ```
 index.html     הדף עם כל כרטיסי המתכונים (הקובץ שכולן עורכות)
 style.css      העיצוב (מותר רק להוסיף)
-scripts/       בדיקות ה-CI (Node, בלי תלויות)
+scripts/       בדיקת התקינות (Node, בלי תלויות)
 .github/       workflows, תבנית PR, CODEOWNERS
 ```
